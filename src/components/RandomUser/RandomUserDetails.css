@@ -1,0 +1,13 @@
+.random-user-area{
+    border : 1px solid lightgray;
+    box-shadow: 10px 10px 40px gray;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* min-height: 450px; */
+}
+.random-user-area img{
+    border-radius: 50%;
+}

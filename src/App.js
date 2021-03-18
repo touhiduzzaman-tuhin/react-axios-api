@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Country from "./components/Country/Country";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
+import NotFound from "./components/NotFound/NotFound";
+import RandomUser from "./components/RandomUser/RandomUser";
+import User from "./components/User/User";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header></Header>
+      <Switch>
+        <Route exact path='/'>
+          <Home></Home>
+        </Route>
+        <Route path='/home'>
+          <Home></Home>
+        </Route>
+        <Route path='/user'>
+          <User></User>
+        </Route>
+        <Route path='/randomUser'>
+          <RandomUser></RandomUser>
+        </Route>
+        <Route path='/country'>
+          <Country></Country>
+        </Route>
+        <Route path='*'>
+          <NotFound></NotFound>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
